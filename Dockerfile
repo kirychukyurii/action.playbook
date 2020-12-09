@@ -17,7 +17,7 @@ RUN go mod download
 # Build the application
 RUN go build -o main 
 
-FROM yuriikirychuk/ansible:2.9.4 as production
+FROM yuriikirychuk/ansible:2.9.9 as production
 
 # Copy binary from build to main folder
 COPY --from=builder /build/main /usr/local/bin
